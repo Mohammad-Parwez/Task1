@@ -7,13 +7,13 @@ This is a simple user authentication system built with Express.js and MongoDB. I
 1. Clone the repository:
 
     ```
-    git clone https://github.com/your_username/your_project.git
+   https://github.com/Mohammad-Parwez/Task1.git
     ```
 
 2. Install dependencies:
 
     ```
-    cd your_project
+    cd ./backend
     npm install
     ```
 
