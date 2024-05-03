@@ -25,7 +25,7 @@ This is a simple user authentication system built with Express.js and MongoDB. I
 4. Start the server:
 
     ```
-    npm start
+    nodemon ./app.js
     ```
 
 5. Access the application at `http://localhost:6391` by default.
