@@ -20,7 +20,7 @@ This is a simple user authentication system built with Express.js and MongoDB. I
 3. Set up MongoDB:
 
     - Make sure MongoDB is installed and running on your system.
-    - Update the MongoDB connection URI in `index.js` if needed (`mongodb://localhost:27017/backend` by default).
+    - Update the MongoDB connection URI in `app.js` if needed (`mongodb://localhost:27017/backend` by default).
 
 4. Start the server:
 
