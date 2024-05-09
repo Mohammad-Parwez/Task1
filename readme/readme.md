@@ -58,7 +58,65 @@ This is a simple user authentication system built with Express.js and MongoDB. I
     ```
 
 - **Forgot Password**: A placeholder route is available at `/api/auth/forgotpassword` for future implementation of the forgot password functionality.
+- 
+- **creating Post**:Send a POST request to `/api/autth/posts` with `username` and `content` fields in the request body. Example:
 
+    ```
+    POST /api/auth/login
+    Content-Type: application/json
+
+    {
+        "username": "example_user",
+        "password": "password123"
+    }
+    ```
+    - **Reading Post**:Send a GET request to `/api/autth/posts`. Example:
+
+    ```
+    POST /api/auth/posts
+    Content-Type: application/json
+  ```
+  - **Updating Post**:Send a PUT request to `/api/autth/posts/:postid` with `content` fields in the request body. Example:
+
+    ```
+    PUT /api/auth/posts/:postid
+    Content-Type: application/json
+
+    {
+        "content": "New content"
+    }
+    ```
+    - **Like Post**:Send a POST request to `/api/autth/posts/:postid/like` with `userId` fields in the request body. Example:
+
+    ```
+    POST /api/auth/posts/:postId/like
+    Content-Type: application/json
+
+    {
+        "userId": "/:userId"
+    }
+    ```
+    - **commenting on Post**:Send a POST request to `/api/autth/posts/:postid/comment` with `userId` and `text` fields in the request body. Example:
+
+    ```
+    POST /api/auth/posts/:postid/comment
+    Content-Type: application/json
+
+    {
+        "userId": "/:userId",
+        "text": "password123"
+    }
+    ```
+    - **Deleting Post**:Send a DELETE request to `/api/autth/posts/:postId`. Example:
+
+    ```
+    DELETE /api/auth/posts/:postId
+    Content-Type: application/json
+
+    {
+        
+    }
+    ```
 ## Dependencies
 
 - express
