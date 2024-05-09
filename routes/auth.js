@@ -13,14 +13,12 @@ router.post('/register', async (req, res) => {
         if (user) {
             return res.status(400).json({ error: 'User already exists' });
         }
-
         // Create new user
         user = new User({ email, username, password });
 
         // Hash password
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
-
         // Save user to database
         await user.save();
 
@@ -55,7 +53,15 @@ router.post('/login', async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
-
+router.get("/users",async(req,res)=>{
+    try{
+        const users = await User.find()
+        res.status(200).json({users});
+    }catch(err){
+        console.log(err)
+        res.status(404).json({message:"server error"})
+    }
+})
 // Forget Password API (placeholder)
 router.post('/forgotpassword', async (req, res) => {
     // Logic for forgot password (send reset link via email, etc.)

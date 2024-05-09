@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth');
+const postRoutes = require('./routes/post')
 
 const app = express();
 
@@ -19,6 +20,7 @@ mongoose.connect('mongodb://localhost:27017/backend')
     res.send("task1")
  })
 app.use('/api/auth', authRoutes);
+app.use('/api/posts', postRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
